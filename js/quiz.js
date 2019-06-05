@@ -23,4 +23,14 @@ function runQuiz(quiz) {
   return quiz;
 }
 
-console.log(runQuiz(createQuiz(questionsList)));
+function mapNamesToResults(quiz) {
+  const strAnswers = quiz.answers.map(answer => {
+    return `${answer.question.name}:\t${answer.isCorrect === null ? answer.text : answer.isCorrect}`
+  })
+
+  return strAnswers.join('\n')
+}
+
+const quizWithResults = runQuiz(createQuiz(questionsList));
+
+console.log(mapNamesToResults(quizWithResults));
