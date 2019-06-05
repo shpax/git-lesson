@@ -1,3 +1,3 @@
-function createQuestion(name) {
+function createQuestion(text) {
   return { text };
 }
