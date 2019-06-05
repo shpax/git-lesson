@@ -2,7 +2,7 @@ function createQuestion(name, text, options = null, correctAnswer = null) {
   return {
     text,
     name,
-    options,
+    options
     correctAnswer,
   };
 }
